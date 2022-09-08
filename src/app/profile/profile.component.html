@@ -1,0 +1,18 @@
+<div class="card">
+    <img [src]="profile_pic" 
+         class="card-img-top" 
+         alt="stock profile">
+        
+    <ul class="list-group list-group-flush">
+        <li class="list-group-item text-center" routerLink="/userProfile">
+            <b>Manwil Zaki</b>
+        </li>
+        <li class="list-group-item ">
+            <div class="jsut"><span>total asset value </span><span>$ {{total_asset_value.toFixed(2)}}</span></div> 
+        </li>
+        <li class="list-group-item">
+            <div class="jsut"><span>cash balance</span><span>$ {{cash_balance.toFixed(2)}}</span></div> 
+         
+        </li>
+    </ul>
+  </div>

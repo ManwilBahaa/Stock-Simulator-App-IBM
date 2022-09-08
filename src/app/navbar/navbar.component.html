@@ -1,0 +1,23 @@
+<nav class="navbar bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand">Mano Stock app</a>
+
+      <ul class="nav justify-content-center">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" routerLink="/">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/userProfile">Profile</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/news">News</a>
+        </li>
+       
+      </ul>
+
+      <form class="d-flex" role="search">
+        <input class="form-control me-2" placeholder="Search ticker" (input)="srhTicker" #srh>
+        <input type="button" class="btn btn-primary" value="search" (click)="Search(srh)">
+      </form>
+    </div>
+  </nav>

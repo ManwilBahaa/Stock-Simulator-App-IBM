@@ -1,0 +1,33 @@
+<div class="container">
+    <ul class="list-group">
+        <li class="list-group-item text-center block">
+            <img [src]="profile_pic" class="profile"/><br/>
+            <div class="h3">{{userName}}</div>
+        </li>
+        <li class="list-group-item ">
+            <div class="jsut mt-2">
+                <div class="h5">Cash Flow : ${{cash_balance.toFixed(2)}}</div>
+                <div class="h5">Total Asset Value : ${{total_asset_value.toFixed(2)}}</div>
+            </div>
+        </li>
+    </ul>
+    <ul class="list-group">
+        <li class="list-group-item" *ngFor="let item of own_tick">
+            
+           <div class="row">
+            <div class="col-10">
+                <img [src]="getImg(item)" class='logo'/>
+                <b>{{item}}</b>
+            </div>
+            <div class="col-1">
+                <b>{{own[item].toFixed(2)}} shares</b> 
+            </div>
+            <div class="col-1">
+                <b>EST. Valeo $ {{getVal(item).toFixed(2)}}</b> 
+            </div>
+           </div>
+            
+        </li>
+    </ul>
+    
+</div>

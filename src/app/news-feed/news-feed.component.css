@@ -1,0 +1,13 @@
+.card{
+    margin:10px;
+    width:70%;
+    margin:auto
+}
+.thumb{
+    height:100%;
+    width:100%;
+}
+.jsut{
+    justify-content: space-between;
+    display: flex;
+}

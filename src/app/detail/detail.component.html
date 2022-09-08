@@ -1,0 +1,86 @@
+
+<ul class="list-group" *ngIf="tickData !==undefined">
+    
+    <li class="list-group-item text-center logo">
+        <img [src]="tickData.logo" alt="logo here">
+    </li>
+    <li class="list-group-item text-center h3" aria-current="true">
+       <b>{{tickData.Name}}</b> 
+    </li>
+
+    <li class="list-group-item d-flex jsut">
+        <div>
+          you own <b>{{own_shares}} </b>shares
+        </div>
+  
+        <div class="btn-group" role="group" aria-label="Basic example">
+          <button type="button" class="btn btn-danger" (click)="sell()" [disabled]="!haveStocks">Sell</button>
+          <button type="button" class="btn btn-success" (click)="buy()">Buy</button>
+        </div> 
+        
+      </li>
+
+    <li class="list-group-item">
+
+        <div class="row">
+            <div class="col-6">
+                <div class="jsut h5 text-primary"><b>Financial Data</b></div>
+                <div class="jsut"><span>Regular Market Previous Close</span><span>{{tickData.regularMarketPreviousClose}}</span></div>
+                <div class="jsut"><span>Regular Market Open</span><span>{{tickData.regularMarketOpen}}</span></div>
+                <div class="jsut"><span>Regular Market Change Percent</span><span>{{tickData.regularMarketChangePercent}}</span></div>
+                <div class="jsut"><span>Regular Market Change</span><span>{{tickData.regularMarketChange}}</span></div>
+            </div>
+
+
+            <div class="col-6">
+                <div class="jsut h5"><br/></div>
+                <div class="jsut"><span>Regular Market Price</span><span>{{tickData.regularMarketPrice}}</span></div>
+                <div class="jsut"><span>Regular Market Day High</span><span>{{tickData.regularMarketDayHigh}}</span></div>
+                <div class="jsut"><span>Regular Market Day Low</span><span>{{tickData.regularMarketDayLow}}</span></div>
+                <div class="jsut"><span>Regular Market Volume</span><span>{{tickData.regularMarketVolume}}</span></div>
+                
+            </div>
+        </div> 
+    </li>
+    <li class="list-group-item">
+
+        <div class="row">
+            <div class="col-6">
+                <div class="jsut h5 text-primary"><b>Market Data</b></div>
+                <div class="jsut"><span>Post Market Change Percent</span><span>{{tickData.postMarketChangePercent}}</span></div>
+                <div class="jsut"><span>Post Market Change</span><span>{{tickData.postMarketChange}}</span></div>
+            </div>
+
+
+            <div class="col-6">
+                <div class="jsut h5"><br/></div>
+                <div class="jsut"><span>Market Cap</span><span>{{tickData.marketCap}}</span></div>
+                <div class="jsut"><span>Post Market Price</span><span>{{tickData.postMarketPrice}}</span></div>
+            </div>
+        </div> 
+    </li>
+
+
+    
+
+
+    <li class="list-group-item active">
+        <div class="row">
+            <div class="col-6">
+                <div class="jsut"><span>Zip</span><span>{{tickData.zip}}</span></div>
+                <div class="jsut"><span>City</span><span>{{tickData.city}}</span></div>
+                <div class="jsut"><span>Country</span><span>{{tickData.country}}</span></div>
+            </div>
+            <div class="col-6">
+
+                <div class="jsut"><span>Address</span><span>{{tickData.address}}</span></div>
+                <div class="jsut"><span>Phone</span><span>{{tickData.phone}}</span></div>
+                <div class="jsut"><span>Website</span><span>{{tickData.website}}</span></div>
+            </div>
+        </div>     
+    </li>
+  </ul>
+
+  <div class="text-center load" *ngIf="tickData ==undefined">
+    <img  src="https://www.svgrepo.com/show/56953/man-improving-business-graphic-arrow-holding-it-up-for-ascendant-stock.svg" alt="choose">
+  </div>
