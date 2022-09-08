@@ -1,8 +1,7 @@
 # Manwil Zaki Stock Simulator
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.1.3.<br/>
-To <b>Get Started</b> you need to install the node packages by running the following command<br/>
-`npm i`
+To <b>Get Started</b> you need to install the node packages by running the following command `npm i`
 
 ## Development server
 
